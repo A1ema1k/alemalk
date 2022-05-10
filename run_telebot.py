@@ -1,8 +1,8 @@
 # ТелеБот
 import telebot
 from telebot import types
-from match.player import PlayersDatabase
-from match.match import Match
+from football_elo.player import PlayersDatabase
+from football_elo.match import Match
 
 # Сюда подставляете свой токен
 bot = telebot.TeleBot('2105483477:AAEd8p7QxIqaUbXci4LEu3WxGJ_u1Lz8dgY')

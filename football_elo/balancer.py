@@ -56,7 +56,8 @@ def knapsack_balance(ratings: List[float],
 
     desired_sum = sum(values) // 2
     # leaving only variants with value more than desired sum to remove permutation duplicates
-    tokens = list(sorted(tokens.items(), key=lambda x: x[0] - desired_sum if x[0] > desired_sum else float('inf')))
+    tokens = list(sorted(tokens.items(), key=lambda x: x[0] - desired_sum if x[0] >= desired_sum else float('inf')))
+    # secondary variants will be suboptimal
     return [token.backtrace() for s, token in tokens[:num_variants]]
 
 

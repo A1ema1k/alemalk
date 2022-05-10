@@ -25,7 +25,7 @@ class PlayersDatabase:
 
         newplayer = {'name': name, 'rating': rating, 'games': games, 'wins': wins, 'defeats': defeats, 'draws': draws,
                      'winrate': winrate}
-        self.players.append(newplayer, ignore_index=True)
+        self.players = self.players.append(newplayer, ignore_index=True)
 
     def remove_player(self, remove_name):
         '''
