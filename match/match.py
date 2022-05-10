@@ -36,7 +36,7 @@ class Match:
 
     def balance_teams(self):
         ratings = [player.rating for player in self.players]
-        team_a, team_b = knapsack_balance(ratings)
+        team_a, team_b = knapsack_balance(ratings)[0]
         self.teams = team_a, team_b
         return [self.players[idx] for idx in team_a], [self.players[idx] for idx in team_b]
 
